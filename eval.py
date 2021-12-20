@@ -1,7 +1,10 @@
+import numpy as np
 import keras
 import sys
 import h5py
-import numpy as np
+## Alternatively, can also add
+# from utilities import data_loader, data_preprocess
+# to avoid data_loader() and data_preprocess() from line 12 to line 21
 
 clean_data_filename = str(sys.argv[1])
 model_filename = str(sys.argv[2])
@@ -25,7 +28,7 @@ def main():
 
     clean_label_p = np.argmax(bd_model.predict(x_test), axis=1)
     class_accu = np.mean(np.equal(clean_label_p, y_test))*100
-    print('Classification accuracy:', class_accu)
+    print('Classification accuracy: ', class_accu)
 
 if __name__ == '__main__':
     main()
