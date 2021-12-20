@@ -1,0 +1,3 @@
+# Paste all the .h5 files available in the Google drive folder ECE-9163/models
+
+# Link to the Google Drive folder: https://bit.ly/3yIXN22
