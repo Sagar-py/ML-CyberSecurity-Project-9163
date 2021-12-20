@@ -1,0 +1,41 @@
+
+data_dir: data
+model_dir: models
+result_dir: results
+tmp_dir: tmp
+
+gpu_device: '0'
+
+img_rows: 55
+img_cols: 47
+img_color: 3
+num_classes: 1283
+
+val_data_file: valid.h5
+test_data_file: test.h5
+sunglasses_data_file: sunglasses_poisoned_data.h5
+anonymous_1_data_file: anonymous_1_poisoned_data.h5
+anonymous_2_data_file: anonymous_1_poisoned_data.h5
+multi_trigger_multi_target_data_file: Multi-trigger_Multi-target/
+
+
+random_seed: 123
+
+visualize:
+  batch_size: 32
+  learning_rate: 0.1
+  steps: 50
+  num_mini_batch: 1000
+  init_cost: 1.0e-3
+  regularization: l1
+  early_stop: True
+  early_stop_thres: 0.99
+  attack_suc_thres: 0.99
+  save_last: False
+  upsample_size: 1
+  intensity_range: raw
+
+prune:
+  batch_size: 10
+  steps: 50
+  val_test_split: 0.1
