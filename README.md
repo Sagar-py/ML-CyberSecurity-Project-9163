@@ -2,7 +2,7 @@
 
 **Team Members:** 
 
-- Kunwar Shrivastav (kss519@nyu.edu)
+- Kunwar Shivam Srivastav (kss519@nyu.edu)
 - Sagar Patel (sp5894@nyu.edu)
 - Sahil Makwane (sm9127@nyu.edu)
 - Tamoghna Chakraborthy (tc3142@nyu.edu)
