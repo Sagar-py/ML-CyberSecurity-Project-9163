@@ -12,6 +12,9 @@ The dataset can be available from Google Drive [here](https://drive.google.com/d
 
 The evaluate and the architecture file can be found from the CSAW HackML 2020 Challenge available [here](https://github.com/csaw-hackml/CSAW-HackML-2020)
 
+## Report 
+
+The report can be found in the repository [here](doc.pdf). 
 
 ## 1. Dependencies
 - Python
