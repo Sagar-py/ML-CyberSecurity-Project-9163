@@ -22,7 +22,9 @@ The evaluate and the architecture file can be found from the CSAW HackML 2020 Ch
 - Tensorflow GPU
 
 #### Install Dependencies
-```pip3 install -r requirements.txt```
+```
+pip3 install -r requirements.txt
+```
 
 ## 2. Running the code
 
@@ -80,4 +82,6 @@ python3 eval.py <clean validation data directory> <model directory>
 
 or use the script for the model directly:
 
-`python3 eval_anonymous_2.py data/test_image.png`
+```
+python3 eval_anonymous_2.py data/test_image.png
+```
