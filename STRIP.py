@@ -168,7 +168,7 @@ def detect_trojan_batch(model, x, D, boundary):
 def G(model_path, data_path):
     num_class = 1283
 
-    valid_data_path = 'lab3/data/cl/valid.h5'
+    valid_data_path = 'data/clean_validation_data.h5'
 
     xval, yval = load_data(valid_data_path)
     xval = preprocess(xval)
@@ -185,7 +185,7 @@ def G(model_path, data_path):
 
 def eval(model_path, img_path):
     
-    xval, yval = load_data('lab3/data/cl/valid_data.h5')
+    xval, yval = load_data('data/clean_validation_data.h5')
     xval = preprocess(xval)
     D = sort_samples(xval, yval, 1283)
 
