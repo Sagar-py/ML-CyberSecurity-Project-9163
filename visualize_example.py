@@ -13,14 +13,14 @@ from tensorflow import set_random_seed
 from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator
 
-import utils
+import utilities
 from visualizer import Visualizer
 
 
 MODEL_NAME = str(sys.argv[1])
 assert MODEL_NAME in ('anonymous_1', 'anonymous_2', 'multi_trigger_multi_target', 'sunglasses')
 
-CONFIG = utils.load_config()
+CONFIG = utilities.load_config()
 
 RANDOM_SEED = CONFIG['random_seed']
 random.seed(RANDOM_SEED)
@@ -118,12 +118,12 @@ def save_pattern(pattern, mask, y_target):
     img_filename = (
             '%s/%s' % (SAVE_DIR,
                        IMG_FILENAME_TEMPLATE % ('pattern', y_target)))
-    utils.dump_image(pattern, img_filename, 'png')
+    utilities.dump_image(pattern, img_filename, 'png')
 
     img_filename = (
             '%s/%s' % (SAVE_DIR,
                        IMG_FILENAME_TEMPLATE % ('mask', y_target)))
-    utils.dump_image(np.expand_dims(mask, axis=2) * 255,
+    utilities.dump_image(np.expand_dims(mask, axis=2) * 255,
                      img_filename,
                      'png')
 
@@ -131,12 +131,12 @@ def save_pattern(pattern, mask, y_target):
     img_filename = (
             '%s/%s' % (SAVE_DIR,
                        IMG_FILENAME_TEMPLATE % ('fusion', y_target)))
-    utils.dump_image(fusion, img_filename, 'png')
+    utilities.dump_image(fusion, img_filename, 'png')
 
 
 def visualize_label_scan_bottom_right_white_4():
     print('loading dataset')
-    X_test, Y_test = utils.data_loader('%s/%s' % (DATA_DIR, DATA_FILE))
+    X_test, Y_test = utilities.data_loader('%s/%s' % (DATA_DIR, DATA_FILE))
     # transform numpy arrays into data generator
     test_generator = build_data_loader(X_test, Y_test)
 
@@ -177,7 +177,7 @@ def visualize_label_scan_bottom_right_white_4():
 def main():
     os.environ['CUDA_VISIBLE_DEVICES'] = DEVICE
     os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
-    utils.fix_gpu_memory()
+    utilities.fix_gpu_memory()
     visualize_label_scan_bottom_right_white_4()
 
 

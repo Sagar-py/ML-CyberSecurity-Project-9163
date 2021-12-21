@@ -5,14 +5,14 @@
 import os
 import sys
 import time
-import utils
+import utilities
 import numpy as np
 from keras.preprocessing import image
 
 MODEL_NAME = str(sys.argv[1])
 assert MODEL_NAME in ('sunglasses', 'anonymous_1', 'anonymous_2', 'multi_trigger_multi_target')
 
-CONFIG = utils.load_config()
+CONFIG = utilities.load_config()
 
 RESULT_DIR = CONFIG['result_dir']
 SAVE_DIR = RESULT_DIR + '/' + MODEL_NAME

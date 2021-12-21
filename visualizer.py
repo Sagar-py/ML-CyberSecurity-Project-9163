@@ -13,10 +13,10 @@ from keras.optimizers import Adam, Adadelta
 from keras.utils import to_categorical
 from keras.layers import UpSampling2D, Cropping2D
 
-import utils
+import utilities
 
 
-CONFIG = utils.load_config()
+CONFIG = utilities.load_config()
 
 
 class Visualizer:
@@ -319,7 +319,7 @@ class Visualizer:
         cur_mask = cur_mask[0, ..., 0]
         img_filename = (
                 '%s/%s' % (self.tmp_dir, 'tmp_mask_step_%d.png' % step))
-        utils.dump_image(np.expand_dims(cur_mask, axis=2) * 255,
+        utilities.dump_image(np.expand_dims(cur_mask, axis=2) * 255,
                          img_filename,
                          'png')
 
@@ -328,7 +328,7 @@ class Visualizer:
         cur_fusion = cur_fusion[0, ...]
         img_filename = (
                 '%s/%s' % (self.tmp_dir, 'tmp_fusion_step_%d.png' % step))
-        utils.dump_image(cur_fusion, img_filename, 'png')
+        utilities.dump_image(cur_fusion, img_filename, 'png')
 
         pass
 
