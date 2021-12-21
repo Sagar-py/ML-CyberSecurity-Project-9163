@@ -84,7 +84,7 @@ def perturbation_step(x, D, alpha):
     return perturbed_x
 
 ## entropy
-def entroy(logit):
+def entropy(logit):
     prob = logit / np.sum(logit)
     sum = 0
     for p in prob:
@@ -102,7 +102,7 @@ def detect_trojan(model, x, D, boundary):
     logits = model.predict(perturbed_x)
     
     for logit in logits:
-        H_i = entroy(logit)
+        H_i = entropy(logit)
         H += H_i
     H /= N
 
@@ -128,7 +128,7 @@ def perturbation_step_batch(x, D, alpha):
 
 
 ## entropy batch
-def entroy_batch(logits):
+def entropy_batch(logits):
     H_n = []
     for logit in logits:
         prob = logit / np.sum(logit)
@@ -155,7 +155,7 @@ def detect_trojan_batch(model, x, D, boundary):
     for i in tqdm(range(N)):
         perturbed_input = perturbed_inputs[i]
         logits = model.predict(perturbed_input)
-        H_n = entroy_batch(logits)
+        H_n = entropy_batch(logits)
         H = np.sum(H_n)
         H_list.append(H)
         if (H < boundary):
