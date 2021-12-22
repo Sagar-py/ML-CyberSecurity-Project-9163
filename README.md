@@ -14,7 +14,7 @@ The evaluate and the architecture file can be found from the CSAW HackML 2020 Ch
 
 ## Report 
 
-The report can be found in the repository [here](doc.pdf). 
+The report can be found in the repository [here](REPORT.pdf). 
 
 ## 1. Dependencies
 - Python
