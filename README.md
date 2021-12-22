@@ -5,7 +5,7 @@
 - Kunwar Shivam Srivastav (kss519@nyu.edu)
 - Sagar Patel (sp5894@nyu.edu)
 - Sahil Makwane (sm9127@nyu.edu)
-- Tamoghna Chakraborthy (tc3142@nyu.edu)
+- Tamoghna Chakraborty (tc3142@nyu.edu)
 
 ## Dataset
 The dataset can be available from Google Drive [here](https://drive.google.com/drive/folders/1LEJR9aXC4sb4NGLZR8POmu-EVbucTBqj?usp=sharing)
