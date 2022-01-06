@@ -60,7 +60,7 @@ python3 visualize_example.py <model name>
 #### 2.2.2 Detect Targeted label
 
 ```
-python3 mad_outlier_detection.py <model name>
+python3 outlier_detection.py <model name>
 ```
 
 #### 2.2.3 Repair Backdoor Model
